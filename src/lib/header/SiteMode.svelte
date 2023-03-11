@@ -1,0 +1,36 @@
+<!--
+@component
+A helpful widget to identify non-production deployment and give some developer diagnostics.
+
+#### Usage:
+```tsx
+	<SiteMode />
+```
+-->
+<script lang="ts">
+	import { backendUrl, siteMode } from '$lib/config';
+</script>
+
+{#if siteMode !== 'production'}
+	<section class="site-mode ds-container">
+		<p>
+			Frontend running in <strong>{siteMode}</strong> mode, backend is
+			<strong>{backendUrl}</strong>.
+		</p>
+
+		<p>
+			<a class="body-link" href="/slow-load">Go to slow page</a> |
+			<a class="body-link" href="/diagnostics">Go to diagnostics page</a>
+		</p>
+	</section>
+{/if}
+
+<style lang="postcss">
+	.site-mode {
+		padding-block: var(--space-md);
+		gap: var(--space-md);
+		background: blue;
+		color: white;
+		text-align: center;
+	}
+</style>

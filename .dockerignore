@@ -1,0 +1,16 @@
+# common
+**/.git/
+**/node_modules/
+**/.svelte-kit/
+
+# frontend (root)
+build/
+tests/
+docs/
+Dockerfile
+docker-compose.yml
+
+# deps/trade-executor-frontend
+deps/trade-executor-frontend/build/
+deps/trade-executor-frontend/package/
+deps/trade-executor-frontend/tests/

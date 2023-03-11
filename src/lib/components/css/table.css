@@ -1,0 +1,271 @@
+/*
+ Default table styling.
+ Excludes .table class for now to avoid conflicts with old table style (see table-old.css).
+*/
+
+table:not(.table) {
+	--border-spacing: var(--space-sl);
+	--cell-padding: var(--space-sl) var(--space-ls);
+	--table-transition: all var(--time-xs) ease-out;
+	--table-font: var(--f-ui-md-medium);
+	--table-letter-spacing: var(--f-ui-md-spacing, normal);
+	border-collapse: separate;
+	border-spacing: 0 var(--border-spacing);
+	margin: calc(-1 * var(--border-spacing)) 0;
+	width: 100%;
+
+	@media (width <= 920px) {
+		--cell-padding: 0 var(--space-xs);
+		--table-font: var(--f-ui-sm-medium) !important;
+		--table-letter-spacing: var(--f-ui-sm-spacing, normal);
+	}
+
+	@media (width <= 768px) {
+		--table-font: var(--f-ui-xs-medium) !important;
+		--table-letter-spacing: var(--f-ui-xs-spacing, normal);
+	}
+
+	& thead tr:first-child {
+		background-color: hsla(var(--hsl-body));
+		position: sticky;
+		top: 0;
+		z-index: 1;
+	}
+
+	& thead.sticky th {
+		border-radius: 0;
+	}
+
+	& th {
+		background: hsla(var(--hsl-body));
+		border-radius: var(--radius-md);
+		color: hsla(var(--hsl-text-extra-light));
+		font: var(--table-font);
+		letter-spacing: var(--table-letter-spacing, normal);
+		overflow: hidden;
+		padding: var(--space-md) var(--space-ls);
+		position: relative;
+		transition: var(--table-transition);
+		white-space: nowrap;
+		text-align: left;
+		text-overflow: ellipsis;
+
+		&.sortable {
+			cursor: pointer;
+			position: relative;
+			user-select: none;
+
+			&:hover {
+				background: hsla(var(--hsl-box), var(--a-box-a));
+				color: hsla(var(--hsl-text-light));
+			}
+
+			& .icon svg {
+				position: absolute;
+				right: var(--space-ls);
+				top: var(--space-ls);
+
+				& path {
+					stroke-width: 0.1875rem;
+				}
+			}
+		}
+
+		&.sorted {
+			color: hsla(var(--hsl-text));
+			padding-right: var(--space-5xl);
+		}
+	}
+
+	& > :not(thead):not(tfoot) tr {
+		& td {
+			background: hsla(var(--hsl-box), var(--a-box-b));
+			height: 3.25rem;
+			font: var(--table-font);
+			letter-spacing: var(--table-letter-spacing, normal);
+			padding: var(--cell-padding);
+			position: relative;
+			transition: var(--table-transition);
+			vertical-align: middle;
+			--button-width: 100%;
+
+			@media (width > 1024px) {
+				height: 3.825rem !important;
+			}
+
+			&:first-child {
+				--cell-padding: 0 var(--space-xs) 0 var(--space-md);
+				border-radius: var(--radius-md) 0 0 var(--radius-md);
+			}
+
+			&:last-child {
+				--cell-padding: 0 var(--space-md) 0 var(--space-xs);
+				border-radius: 0 var(--radius-md) var(--radius-md) 0;
+
+				& .button {
+					margin-right: calc(-1 * var(--space-sm));
+				}
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&:focus-within {
+			& td {
+				background: hsla(var(--hsl-box), var(--a-box-d));
+			}
+
+			& .button {
+				--c-accent: var(--hsl-text);
+				color: hsla(var(--hsl-text-inverted));
+			}
+
+			& .up-down-cell .up-down-indicator {
+				&.bearish {
+					background: hsla(var(--hsl-bearish), 0.24) !important;
+				}
+				&.bullish {
+					background: hsla(var(--hsl-bullish), 0.24) !important;
+				}
+			}
+		}
+
+		& a {
+			position: relative;
+
+			&::before {
+				bottom: calc(-1 * var(--space-sm));
+				border-radius: var(--radius-sm);
+				content: '';
+				left: calc(-1 * var(--space-sm));
+				position: absolute;
+				right: calc(-1 * var(--space-sm));
+				top: calc(-1 * var(--space-sm));
+				transition: background var(--time-sm) ease-out;
+			}
+
+			&:hover::before {
+				background: hsla(var(--hsl-box), var(--a-box-c));
+			}
+		}
+	}
+
+	& :is(th, td).right {
+		text-align: right;
+	}
+
+	&.responsive {
+		@media (width <= 768px) {
+			--table-font: var(--f-ui-md-medium) !important;
+			--table-letter-spacing: var(--f-ui-xs-spacing, normal);
+
+			border-collapse: separate;
+			border-spacing: 0 var(--border-spacing);
+			margin: calc(-1 * var(--border-spacing)) 0;
+			width: 100%;
+
+			&,
+			& tbody {
+				display: grid;
+				gap: var(--space-md);
+			}
+
+			& thead {
+				display: none !important;
+			}
+
+			& > :not(thead):not(tfoot) tr {
+				background: hsla(var(--hsl-box), var(--a-box-b));
+				border-radius: var(--radius-md);
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(max(25%, 10rem), 1fr));
+				overflow: hidden;
+				padding: var(--space-sm) 0;
+
+				@media (min-width: 512px) {
+					grid-template-columns: repeat(auto-fit, minmax(max(25%, 15.5rem), 1fr)) !important;
+				}
+
+				& td {
+					align-content: start;
+					background: transparent;
+					border-radius: 0;
+					display: grid;
+					font: var(--f-ui-xl-medium);
+					gap: var(--space-xxs);
+					height: auto;
+					padding: var(--space-sm) var(--space-ml);
+					word-break: break-all;
+
+					&:not(.cta)::before {
+						content: attr(data-label);
+						font: var(--f-ui-xs-roman);
+					}
+
+					&.cta {
+						padding-bottom: var(--space-ms);
+						padding-top: var(--space-ms);
+						grid-column: 1/-1;
+					}
+				}
+			}
+
+			& tfoot,
+			& tfoot tr {
+				display: grid;
+			}
+
+			& .up-down-cell {
+				justify-content: flex-start;
+				margin-top: var(--space-sm);
+			}
+		}
+	}
+
+	& .button {
+		white-space: nowrap;
+	}
+}
+
+table.loading {
+	& :not(thead, tfoot) tr td {
+		color: transparent;
+
+		&::before {
+			animation: pulse-opacity 1s infinite ease-out;
+			background: hsla(var(--hsl-box), var(--a-box-c));
+			bottom: var(--space-sm);
+			border-radius: var(--radius-sm);
+			content: '';
+			left: var(--space-sm);
+			position: absolute;
+			right: var(--space-sm);
+			top: var(--space-sm);
+		}
+
+		& * {
+			color: transparent;
+			background: transparent !important;
+		}
+	}
+
+	& .button {
+		cursor: loading;
+
+		& span {
+			color: transparent;
+
+			&::before {
+				animation: pulse-opacity 1s infinite ease-out;
+				background: hsla(var(--hsl-box), var(--a-box-c));
+				bottom: var(--space-lg);
+				border-radius: var(--radius-sm);
+				content: '';
+				left: var(--space-lg);
+				position: absolute;
+				right: var(--space-lg);
+				top: var(--space-lg);
+			}
+		}
+	}
+}
