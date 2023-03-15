@@ -26,15 +26,15 @@
 </script>
 
 <svelte:head>
-	<title>Trading Strategy Blog</title>
+	<title> Blog</title>
 	<meta name="description" content="Insights and research on DeFi and algorithmic trading." />
 </svelte:head>
 
 <main class="blog-index-page">
 	<Section class="hero" header layout="boxed">
 		<HeroBanner
-			title="Trading Strategy Blog"
-			subtitle="Read our insights into on-chain trading. We cover trading and investing in blockchains, decentralised finance (DeFi), decentralised exchanges (DEXes), automated trading strategies and web3."
+			title="Blog"
+			subtitle="Read our insights , We  are introduce something new............................."
 			image={heroImage}
 			hr={true}
 		>
@@ -42,9 +42,9 @@
 		</HeroBanner>
 	</Section>
 
-	<Section class="posts" layout="boxed" padding="md">
+	<!---<Section class="posts" layout="boxed" padding="md">
 		<BlogRoll {posts} />
-	</Section>
+	</Section>--->
 
 	<Section class="loading" layout="boxed">
 		{#if page.loading}

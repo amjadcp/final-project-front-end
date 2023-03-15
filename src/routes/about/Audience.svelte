@@ -2,7 +2,7 @@
 	import { Button, Section, SummaryBox } from '$lib/components';
 </script>
 
-<div class="audience">
+<!-----<div class="audience">
 	<Section
 		cols={2}
 		gap="xl"
@@ -52,7 +52,7 @@
 			/>
 		</SummaryBox>
 	</Section>
-</div>
+</div>--->
 
 <style lang="postcss">
 	.audience {

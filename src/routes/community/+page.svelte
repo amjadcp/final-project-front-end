@@ -8,7 +8,7 @@
 		slot="hero"
 		image={heroImage}
 		title="Community"
-		subtitle="Join our community of expert traders, strategy developers and quants.<br /> Learn more about the Trading Strategy protocol, algorithmic trading and DeFi markets."
+		subtitle="Join our community of expert teachers and students.<br /> Learn more about the our department."
 	/>
 
 	<ContentCardsSection cols={3} title="Discuss & develop">
@@ -17,21 +17,21 @@
 			icon="discord"
 			title="Discord chat"
 			href="https://discord.gg/en8tW6MDtw"
-			description="Join our expert community of traders, developers, and analysts and DeFi specialists."
+			description="Join our expert community of teachers and students."
 		/>
 		<ContentCard
 			ctaLabel="Browse code"
 			icon="github"
 			title="GitHub"
 			href="https://github.com/tradingstrategy-ai/"
-			description="Explore Trading Strategy open-source code on our GitHub repository."
+			description="Explore our deprtment open-source code on our GitHub repository."
 		/>
 		<ContentCard
 			ctaLabel="Start tutorials"
 			icon="read-glasses"
 			title="Learn algorithmic trading"
 			href="https://tradingstrategy.ai/docs/learn/index.html"
-			description="Learn how to write trading algorithms with our learning resources collection."
+			description="Learn our course."
 		/>
 	</ContentCardsSection>
 
@@ -41,35 +41,35 @@
 			icon="reading"
 			title="Blog"
 			href="/blog"
-			description="Join our expert community of traders, developers, and analysts and DeFi specialists."
+			description="Join our expert community ."
 		/>
 		<ContentCard
 			ctaLabel="Follow us"
 			icon="twitter"
 			title="Twitter"
 			href="https://twitter.com/TradingProtocol"
-			description="Follow us on Twitter for trading alerts, DeFi insight and protocol news."
+			description="Follow us on Twitter ."
 		/>
 		<ContentCard
 			ctaLabel="Subscribe to our channel"
 			icon="youtube"
 			title="YouTube"
-			href="https://www.youtube.com/channel/UCXBQRclPxMY40n52-k3VhYQ"
-			description="Subscribe to our Youtube channel and watch the latest videos on DeFi and algorithmic trading."
+			href="https://youtu.be/ZcLYuARq49k"
+			description="Subscribe to our Youtube channel ."
 		/>
 		<ContentCard
 			ctaLabel="Follow our company"
 			icon="linkedin"
 			title="LinkedIn"
 			href="https://www.linkedin.com/company/trading-strategy/"
-			description="Follow us on LinkedIn and join our community of traders, developers and quant experts."
+			description="Follow us on LinkedIn and join our community ."
 		/>
 		<ContentCard
 			ctaLabel="Join our group"
 			icon="telegram"
 			title="Telegram"
 			href="https://t.me/trading_protocol"
-			description="Subscribe to our Telegram channel for trading alerts, DeFi insight and protocol news."
+			description="Subscribe to our Telegram channel ."
 		/>
 		<div style:display="contents" style:cursor="pointer">
 			<ContentCard
@@ -77,7 +77,7 @@
 				icon="newspaper"
 				title="Newsletter"
 				href="/newsletter"
-				description="Subscribe to our newsletter and never miss protocol updates, trading tips, news and insights."
+				description="Subscribe."
 			/>
 		</div>
 	</ContentCardsSection>

@@ -1,15 +1,13 @@
 <header class="ds-container">
 	<h1>
-		Next generation<br />
-		algorithmic trading protocol<br />
-		for decentralised markets<br />
+		DEPARTMENT OF VOCTIONAL STUDIES
 	</h1>
 	<p>
-		Create or invest in algorithmic trading strategies on decentralised<br />
-		markets. The Trading Strategy protocol facilitates automated<br />
-		cryptocurrency trading built on a safe and secure non-custodial<br />
-		framework.
-	</p>
+		BVoc stands for Bachelor of Vocational Education. 
+
+BVoc Software Development is a vocational degree program that focuses on teaching students the skills required to develop software applications. The course covers topics such as programming languages, software engineering, web development, mobile application development, database management, and project management. Students who graduate from this program are well-prepared to work as software developers, software engineers, web developers, and other related positions in the IT industry.
+
+
 </header>
 
 <style lang="postcss">

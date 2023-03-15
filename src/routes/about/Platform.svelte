@@ -10,7 +10,7 @@
 </script>
 
 <section class="ds-container">
-	<header>
+	<!-------<header>
 		<h2>The Trading Strategy protocol</h2>
 		<p>
 			Trading Strategy is the first protocol replacing investment managers with code.<br />
@@ -19,9 +19,9 @@
 				>compares to yield farming and quantative hedge funds</a
 			>.
 		</p>
-	</header>
+	</header>-->
 
-	<Feature title="Active on-chain trading" image={BlockchainImage}>
+	<!------<Feature title="Active on-chain trading" image={BlockchainImage}>
 		<li>
 			Protocol is fully compatible with 1M+ trading pairs on all major decentralised markets and blockchains such as
 			Uniswap, PancakeSwap on Ethereum, Polygon and Binance Smart Chain
@@ -77,7 +77,7 @@
 		<li>All historical price, volume and liquidity data for decentralised exchanges (DEX)</li>
 		<li>Parquet file format</li>
 		<li>Large files</li>
-	</Feature>
+	</Feature>--->
 </section>
 
 <style lang="postcss">

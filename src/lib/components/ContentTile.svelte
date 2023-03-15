@@ -6,7 +6,7 @@ A `ctaLabel` or `cta` slot may also be provided to include an explicit button ta
 
 #### Usage:
 ```tsx
-	<ContentTile
+<ContentTile
 		title="Content title"
 		description="This is some amazing content!"
 		mediaSrc="https://example.com/image"
