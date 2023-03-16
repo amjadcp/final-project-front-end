@@ -27,12 +27,15 @@
 
 <svelte:head>
 	<title> Blog</title>
+	<title> Blog</title>
 	<meta name="description" content="Insights and research on DeFi and algorithmic trading." />
 </svelte:head>
 
 <main class="blog-index-page">
 	<Section class="hero" header layout="boxed">
 		<HeroBanner
+			title="Blog"
+			subtitle="Read our insights , We  are introduce something new............................."
 			title="Blog"
 			subtitle="Read our insights , We  are introduce something new............................."
 			image={heroImage}
@@ -42,6 +45,7 @@
 		</HeroBanner>
 	</Section>
 
+	<!---<Section class="posts" layout="boxed" padding="md">
 	<!---<Section class="posts" layout="boxed" padding="md">
 		<BlogRoll {posts} />
 	</Section>--->
