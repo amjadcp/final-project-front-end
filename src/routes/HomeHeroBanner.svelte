@@ -36,7 +36,7 @@ Home page hero banner.
 
 			<div class="buttons">
 				<Button href="/trading-view">Explore</Button>
-				<Button secondary href="https://tradingstrategy.ai/docs">Read Documentation</Button>
+				<Button secondary href="">Read Documentation</Button>
 			</div>
 		</div>
 	</div>
