@@ -35,8 +35,6 @@
 		<HeroBanner
 			title="Blog"
 			subtitle="Read our insights , We  are introduce something new............................."
-			title="Blog"
-			subtitle="We are intoducing something new"
 			image={heroImage}
 			hr={true}
 		>
@@ -47,6 +45,31 @@
 	<!---<Section class="posts" layout="boxed" padding="md">
 		<BlogRoll {posts} />
 	</Section>--->
+	<Section class="blog" layout="boxed">
+		<div class="row">
+			<div class="col-md-6">
+			  <div class="card" style="width: 18rem;">
+				<img src="..." class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Card title 1</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6">
+			  <div class="card" style="width: 18rem;">
+				<img src="..." class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Card title 2</h5>
+				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <a href="#" class="btn btn-primary">Go somewhere</a>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+	</Section>
 
 	<Section class="loading" layout="boxed">
 		{#if page.loading}
