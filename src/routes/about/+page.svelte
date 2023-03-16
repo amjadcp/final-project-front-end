@@ -13,10 +13,10 @@
 
 <main>
 	<IntroHero />
-	<HeroVideo youTubeId="iPXuqwYDv9U" title="Trading Strategy intro video" />
+	<HeroVideo youTubeId="ZcLYuARq49k" title="Our collage video" />
 	<Audience />
 
-	<Section
+	<!-------<Section
 		title="Are you an institutional investor looking to create your own private strategies and deploy them on our protocol?"
 		class="banner"
 		gap="4xl"
@@ -34,13 +34,13 @@
 		</div>
 
 		<Button label="Contact now" href="mailto:info@tradingstrategy.ai" />
-	</Section>
+	</Section>--->
 
 	<Partners />
 
-	<Platform />
+<!------<Platform />--->
 
-	<Section gap="3xl" title="Do you want to trade on decentralised markets?" class="banner" layout="boxed" padding="md">
+	<!------<Section gap="3xl" title="Do you want to trade on decentralised markets?" class="banner" layout="boxed" padding="md">
 		<div>
 			<p>
 				You can leverage our decentralised market data for your market analytics, technical analysis, service or
@@ -56,7 +56,7 @@
 		</div>
 
 		<Button label="Contact now" href="mailto:info@tradingstrategy.ai" />
-	</Section>
+	</Section>---->
 
 	<Section title="Get in touch" gap="lg" layout="boxed" padding="md">
 		<div class="contact-cta">

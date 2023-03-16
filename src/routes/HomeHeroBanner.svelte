@@ -10,7 +10,7 @@ Home page hero banner.
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { formatAmount, formatDollar } from '$lib/helpers/formatters';
-	import mbp15Image from '$lib/assets/misc/mbp-15.webp';
+	import rajagateImage from '$lib/assets/misc/rajagate.webp';
 	import { Button } from '$lib/components';
 
 	export let impressiveNumbers: any;
@@ -18,36 +18,25 @@ Home page hero banner.
 
 <header class="home-hero-banner" data-testid="home-hero-banner" on:dblclick={() => goto('/strategies')}>
 	<div class="inner ds-container">
-		<img class="media" src={mbp15Image} alt="Trading Data" />
+		<img class="media" src={rajagateImage} alt="Trading Data" />
 
 		<div class="content">
 			<h1>
 				<!-- ensure line breaks at correct place on larger screens -->
-				Next generation <br />algorithmic trading protocol <br />for decentralised markets
+				DEPARTMENT OF VOCTIONAL STUDIES
 			</h1>
 
 			<hr />
 
 			{#if impressiveNumbers}
 				<p class="impressive-numbers">
-					Market data and trading strategy framework for
-					<a href="/trading-view/trading-pairs">
-						{formatAmount(impressiveNumbers.pairs)} trading pairs
-					</a>
-					providing
-					<a href="/trading-view/trading-pairs" style:white-space="nowrap">
-						{formatDollar(impressiveNumbers.liquidity)} liquidity
-					</a>
-					across
-					<a href="/trading-view/blockchains" style:white-space="nowrap">
-						{impressiveNumbers.blockchains} blockchains
-					</a>
+					BVoc stands for Bachelor of Vocational Education. BVoc Software Development is our deparment.
 				</p>
 			{/if}
 
 			<div class="buttons">
-				<Button href="/trading-view">Explore DEX Data</Button>
-				<Button secondary href="https://tradingstrategy.ai/docs">Read Documentation</Button>
+				<Button href="/trading-view">Explore</Button>
+				<Button secondary href="">Read Documentation</Button>
 			</div>
 		</div>
 	</div>

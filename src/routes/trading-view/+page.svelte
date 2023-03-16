@@ -43,16 +43,16 @@
 			icon="book"
 			title="Documentation"
 			ctaLabel="Read documentation"
-			href="https://tradingstrategy.ai/docs"
-			description="You can read our documentation here"
+			href=""
+			description="Trading Strategy provides Python libraries for strategy development and execution for decentralised exchanges. Read API documentation and tutorials to learn how to create your own strategies."
 		/>
 
 		<ContentCard
 			icon="python"
 			title="Notebooks"
 			ctaLabel="Go to notebooks"
-			href="https://tradingstrategy.ai/docs/programming/strategy-examples/index.html"
-			description="You can download all notes here"
+			href=""
+			description="Use popular Jupyter Notebook, Pandas and other data science libraries to model and backtest your strategies. View example notebooks to see how to use DeFi data in your notebooks."
 		/>
 	</ContentCardsSection>
 </ContentCardsTemplate>

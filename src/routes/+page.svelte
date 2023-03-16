@@ -21,8 +21,8 @@
 </script>
 
 <svelte:head>
-	<title>Trading Strategy - Algorithmic Trading Protocol</title>
-	<meta name="description" content="DeFi market data and systematic trading" />
+	<title>Farook collage</title>
+	<meta name="description" content="Department of vocational studies" />
 	{@html sitelinksSearchBox()}
 </svelte:head>
 
@@ -30,18 +30,26 @@
 	<HomeHeroBanner {impressiveNumbers} />
 
 	{#if topMomentum}
-		<Section class="top-trades" layout="boxed" padding="md" title="Top trades" cols={2} gap="lg">
-			<SummaryBox title="Most profitable 24h">
-				<Button size="sm" slot="headerCta" href="/trading-view/top-list/daily-up">View all winning pairs</Button>
-				<Button size="md" slot="footerCta" href="/trading-view/top-list/daily-up">View all winning pairs</Button>
-				<TopTradesTable pairs={topMomentum.top_up_24h_min_liq_1m} />
+		<Section class="top-trades" layout="boxed" padding="md" title="Our Faculties" cols={2} gap="lg">
+			<SummaryBox title="Our HOD">
+				<!-----<Button size="sm" slot="headerCta" href="/trading-view/top-list/daily-up">View Details</Button>
+				<Button size="md" slot="footerCta" href="/trading-view/top-list/daily-up">View Details</Button>
+				<TopTradesTable pairs={topMomentum.top_up_24h_min_liq_1m} />---->
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="mubeena.png" alt="Card image cap">
+					<div class="card-body">
+					  <h5 class="card-title">Mubeena.v</h5>
+					  <p class="card-text"></p>
+					  
+					</div>
+				  </div>
 			</SummaryBox>
 
-			<SummaryBox title="Worst performance 24h">
-				<Button size="sm" slot="headerCta" href="/trading-view/top-list/daily-down">View all losing pairs</Button>
-				<Button size="md" slot="footerCta" href="/trading-view/top-list/daily-down">View all losing pairs</Button>
+			<!------<SummaryBox title="">
+				<Button size="sm" slot="headerCta" href="/trading-view/top-list/daily-down">View Details</Button>
+				<Button size="md" slot="footerCta" href="/trading-view/top-list/daily-down">View Details</Button>
 				<TopTradesTable pairs={topMomentum.top_down_24h_min_liq_1m} />
-			</SummaryBox>
+			</SummaryBox>---->
 		</Section>
 	{/if}
 
@@ -50,7 +58,7 @@
 			<h2>Strategies</h2>
 			<Illustration name="bull-vs-bear" height="min(30vh, 20rem)" />
 			<div class="coming-soon">Coming soon</div>
-			<p>Follow us to be the first to know when our automated trading strategies go live.</p>
+			<p>Follow us to be the first to know when our  strategies go live.</p>
 			<div class="ctas">
 				<div class="newsletter-cta">
 					<Button icon="newspaper" label="Subscribe to newsletter" on:click={scrollToNewsletterOptIn} />
@@ -66,12 +74,12 @@
 		</div>
 	</Section>
 
-	{#if posts}
+	<!---{#if posts}
 		<Section title="Blog" class="blog" layout="boxed" padding="md">
 			<BlogRoll {posts} />
 			<Button label="Read all posts" href="/blog" slot="footer" />
 		</Section>
-	{/if}
+	{/if}---->
 
 	<Section class="newsletter" id="home-newsletter" layout="boxed" padding="md">
 		<NewsletterOptInBanner />
