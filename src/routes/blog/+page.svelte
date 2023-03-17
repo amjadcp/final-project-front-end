@@ -40,7 +40,7 @@
 			image={heroImage}
 			hr={true}
 		>
-			<SocialLinks />
+			
 		</HeroBanner>
 	</Section>
 
