@@ -36,8 +36,7 @@
 		<HeroBanner
 			title="Blog"
 			subtitle="Read our insights , We  are introduce something new............................."
-			title="Blog"
-			subtitle="Read our insights , We  are introduce something new............................."
+			
 			image={heroImage}
 			hr={true}
 		>
@@ -46,7 +45,7 @@
 	</Section>
 
 	<!---<Section class="posts" layout="boxed" padding="md">
-	<!---<Section class="posts" layout="boxed" padding="md">
+	<Section class="posts" layout="boxed" padding="md">
 		<BlogRoll {posts} />
 	</Section>--->
 	<Section class="blog" layout="boxed">
