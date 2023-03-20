@@ -29,7 +29,7 @@
 </script>
 
 <svelte:head>
-	<title>Trading Strategy Blog</title>
+	<title>Study Material</title>
 	<meta name="description" content="Insights and research on DeFi and algorithmic trading." />
 </svelte:head>
 

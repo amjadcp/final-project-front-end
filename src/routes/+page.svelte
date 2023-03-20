@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Trading Strategy - Algorithmic Trading Protocol</title>
+	<title>Bvoc Software Development</title>
 	<meta name="description" content="DeFi market data and systematic trading" />
 	{@html sitelinksSearchBox()}
 </svelte:head>

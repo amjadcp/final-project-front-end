@@ -11,7 +11,7 @@ A helpful widget to identify non-production deployment and give some developer d
 	import { backendUrl, siteMode } from '$lib/config';
 </script>
 
-{#if siteMode !== 'production'}
+<!-- {#if siteMode !== 'production'}
 	<section class="site-mode ds-container">
 		<p>
 			Frontend running in <strong>{siteMode}</strong> mode, backend is
@@ -23,7 +23,7 @@ A helpful widget to identify non-production deployment and give some developer d
 			<a class="body-link" href="/diagnostics">Go to diagnostics page</a>
 		</p>
 	</section>
-{/if}
+{/if} -->
 
 <style lang="postcss">
 	.site-mode {

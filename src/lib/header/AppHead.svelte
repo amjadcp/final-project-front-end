@@ -4,8 +4,8 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/favicon.ico" sizes="any" />
-	<link rel="icon" type="image/svg+xml" href={favicon} />
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed for tradingstrategy.ai" href="/blog/rss.xml" />
+	<!-- <link rel="icon" href="/favicon.ico" sizes="any" /> -->
+	<!-- <link rel="icon" type="image/svg+xml" href={favicon} /> -->
+	<!-- <link rel="alternate" type="application/rss+xml" title="RSS Feed for tradingstrategy.ai" href="/blog/rss.xml" /> -->
 	<FontPreloadHints />
 </svelte:head>
