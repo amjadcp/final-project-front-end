@@ -66,6 +66,7 @@
 		font-size: 16px;
 		padding: 0;
 		cursor: pointer;
+		color: #be913d;
 	}
 
 	.color-mode-picker {

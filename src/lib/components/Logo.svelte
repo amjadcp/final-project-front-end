@@ -1,22 +1,26 @@
 <script lang="ts">
-	import svg from '$lib/assets/logo-horizontal.svg?raw';
+	import logo from '$lib/assets/farookcollege-logo.png';
 </script>
 
 <div>
-	{@html svg}
+	<!-- {@html svg} -->
+	<img src={logo} alt="">
 </div>
 
 <style>
 	div {
 		display: contents;
 	}
-
-	div :global(svg) {
+	img {
+		width: 80px;
+		height: 80px;
+	}
+	/* div :global(svg) {
 		width: var(--logo-width, auto);
 		height: var(--logo-height, auto);
-	}
+	} */
 
-	div :global(.logotype) {
+	/* div :global(.logotype) {
 		fill: currentColor;
-	}
+	} */
 </style>

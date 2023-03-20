@@ -5,23 +5,25 @@
 	import Search from '$lib/search/Search.svelte';
 
 	$: currentPage = $page.url.pathname;
-	$: showSearch = $page.url.pathname !== '/search';
+	// $: showSearch = $page.url.pathname !== '/search';
 </script>
 
 <Section header layout="boxed">
 	<div class="nav-bar" style:overflow="visible">
 		<Header>
 			<svelte:fragment slot="menu">
-				<MenuItem label="Trading data" targetUrl="/trading-view" active={currentPage === '/trading-view'} />
-				<MenuItem label="About" targetUrl="/about" active={currentPage === '/about'} />
-				<MenuItem label="Documentation" targetUrl="https://tradingstrategy.ai/docs/index.html" />
+				<!-- <MenuItem label="Trading data" targetUrl="/trading-view" active={currentPage === '/trading-view'} /> -->
+				<MenuItem label="Home" targetUrl="https://fcdepofvocation.netlify.app/" target="_blank"/>
+				<MenuItem label="About" targetUrl="/" active={currentPage === '/'} />
+				<!-- <MenuItem label="About" targetUrl="/about" active={currentPage === '/about'} /> -->
 				<MenuItem label="Community" targetUrl="/community" active={currentPage === '/community'} />
-				<MenuItem label="Blog" targetUrl="/blog" active={currentPage === '/blog'} />
+				<MenuItem label="Updates" targetUrl="/updates" active={currentPage === '/updates'} />
+				<!-- <MenuItem label="Blog" targetUrl="/blog" active={currentPage === '/blog'} /> -->
 			</svelte:fragment>
 
-			<svelte:fragment slot="search">
+			<!-- <svelte:fragment slot="search">
 				{#if showSearch}<Search />{/if}
-			</svelte:fragment>
+			</svelte:fragment> -->
 		</Header>
 	</div>
 </Section>

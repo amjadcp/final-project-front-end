@@ -11,7 +11,8 @@ Display a collection of blog posts is a responsive grid layout.
 	import type { Blog } from '$lib/types';
 	import { ContentTile } from '$lib/components';
 
-	export let posts: Blog.BlogPost[];
+	export let posts : Blog.BlogPost[];
+	
 </script>
 
 <div class="blog-roll" data-testid="blog-roll">
@@ -19,14 +20,14 @@ Display a collection of blog posts is a responsive grid layout.
 		<ContentTile
 			ctaLabel="Read article"
 			href="/blog/{post.slug}"
-			mediaSrc={post.feature_image}
-			mediaAlt={post.feature_image_alt}
+			mediaSrc={post.image}
+			mediaAlt={post.image}
 			title={post.title}
 			date={post.published_at}
-			description={post.excerpt}
+			description={post.description}
 		/>
 	{:else}
-		<p>No blog posts found (check if Ghost is properly configured)</p>
+		<p>No updates found</p>
 	{/each}
 </div>
 

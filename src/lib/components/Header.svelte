@@ -18,11 +18,11 @@
 		</Menu>
 	</nav>
 
-	<div class="search">
+	<!-- <div class="search">
 		<slot name="search">
 			<TextInput type="search" --text-input-width="100%" />
 		</slot>
-	</div>
+	</div> -->
 
 	<div class="desktop-only">
 		<ColorModePicker />
@@ -75,7 +75,7 @@
 
 	.logo {
 		grid-column: logo-start / logo-end-lg;
-		--logo-height: 38px;
+		--logo-height: 80px;
 	}
 
 	.logo a {
@@ -96,11 +96,15 @@
 
 	.show-nav-panel {
 		display: flex;
+		color: #be913d;
 		background: transparent;
 		border: none;
 		font-size: 24px;
 		padding: 0;
 		cursor: pointer;
+		justify-self: end;
+		grid-column: menu-end;
+
 	}
 
 	.nav-panel {
