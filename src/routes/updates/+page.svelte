@@ -16,7 +16,7 @@
 	console.log(page);
 	
 	const fetchNextPage =async()=> {
-		page.loading
+		page.loading = true
 		try {
 			const response = await fetchUpdates(page);
 			posts = [...posts, ...response.posts];

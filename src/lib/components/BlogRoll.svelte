@@ -21,7 +21,7 @@ Display a collection of blog posts is a responsive grid layout.
 			ctaLabel="Read article"
 			href="/blog/{post.slug}"
 			mediaSrc={post.image}
-			mediaAlt={post.image}
+			mediaAlt="no Image"
 			title={post.title}
 			date={post.published_at}
 			description={post.description}

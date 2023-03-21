@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData, PageLoad } from './$types';
 	// import fetchPosts from './fetchPosts';
-	import fetchUpdates from './fetchUpdates';
+	import fetchMaterial from './fetchMaterial';
 	import { inview } from 'svelte-inview';
 	import Spinner from 'svelte-spinner';
 	import { BlogRoll, HeroBanner, Section } from '$lib/components';
@@ -13,12 +13,10 @@
 
 	let { posts, page } = data;
 	
-	console.log(page);
-	
 	const fetchNextPage =async()=> {
-		page.loading
+		page.loading = true
 		try {
-			const response = await fetchUpdates(page);
+			const response = await fetchMaterial(page);
 			posts = [...posts, ...response.posts];
 			page = response.page;
 		} catch (e) {

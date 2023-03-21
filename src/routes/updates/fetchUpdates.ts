@@ -15,7 +15,7 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
     });
 
     const storyblokApi = useStoryblokApi();
-    const response = await storyblokApi.get(`cdn/stories?filter_query[component][is]=updates&page=${page.next}&per_page=1`, { version: 'published' });
+    const response = await storyblokApi.get(`cdn/stories?filter_query[component][in]=updates&page=${page.next}&per_page=6`, { version: 'published' });
     const updates  = response.data.stories;
     
     for(let i=0; i<updates.length; i++){
@@ -25,6 +25,8 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
 	
     if(page.next * response.perPage >= response.total) page.next = 0
     else page.next += 1
+
+	page.loading = false
 	 
 	return {
 		posts: [...updates],
