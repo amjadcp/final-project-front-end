@@ -4,7 +4,7 @@
 	import fetchMaterial from './fetchMaterial';
 	import { inview } from 'svelte-inview';
 	import Spinner from 'svelte-spinner';
-	import { BlogRoll, HeroBanner, Section } from '$lib/components';
+	import { StudyMaterialRoll, HeroBanner, Section } from '$lib/components';
 	import OptInBanner from '$lib/newsletter/OptInBanner.svelte';
 	// import SocialLinks from './SocialLinks.svelte';
 	import heroImage from '$lib/assets/illustrations/newspaper-1.svg?raw';
@@ -44,7 +44,7 @@
 	</Section>
 
 	<Section class="posts" layout="boxed" padding="md">
-		<BlogRoll {posts} />
+		<StudyMaterialRoll {posts} />
 	</Section>
 
 	<Section class="loading" layout="boxed">

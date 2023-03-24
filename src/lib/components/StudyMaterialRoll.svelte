@@ -11,7 +11,7 @@ Display a collection of blog posts is a responsive grid layout.
 	import type { Post } from '$lib/types';
 	import { ContentTile } from '$lib/components';
 
-	export let posts : Post.BlogPost[];
+	export let posts : Post.StudyMaterial[];
 	
 </script>
 
@@ -19,9 +19,9 @@ Display a collection of blog posts is a responsive grid layout.
 	{#each posts as post (post.id)}
 		<ContentTile
 			ctaLabel="Read article"
-			href="/blog/{post.slug}"
-			mediaSrc={post.feature_image}
-			mediaAlt={post.feature_image_alt}
+			href="/study-material/{post.slug}"
+			mediaSrc={post.image}
+			mediaAlt="no Image"
 			title={post.title}
 			date={post.published_at}
 			description={post.description}
