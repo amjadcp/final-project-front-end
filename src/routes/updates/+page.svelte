@@ -12,9 +12,7 @@
 	export let data: PageData;
 
 	let { posts, page } = data;
-	
-	console.log(page);
-	
+		
 	const fetchNextPage =async()=> {
 		page.loading = true
 		try {
