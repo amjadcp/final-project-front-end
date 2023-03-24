@@ -18,10 +18,10 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
     const response = await storyblokApi.get(`cdn/stories?filter_query[component][in]=study-material&page=${page.next}&per_page=6`, { version: 'published' });
     const material  = response.data.stories;
     
-    // for(let i=0; i<material.length; i++){
-    //     material[i].image = material[i].content.image.filename
-    //     material[i].title = material[i].content.title
-    // }
+    for(let i=0; i<material.length; i++){
+        material[i].material = material[i].content.material.filename
+        material[i].title = material[i].content.title
+    }
 	
     if(page.next * response.perPage >= response.total) page.next = 0
     else page.next += 1

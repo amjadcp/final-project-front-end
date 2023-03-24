@@ -30,7 +30,7 @@ A `ctaLabel` or `cta` slot may also be provided to include an explicit button ta
 	export let mediaSrc = '';
 	export let mediaAlt = '';
 	export let title = '';
-
+	export let materialLink = '';
 	$: tag = href ? 'a' : 'div';
 	$: anchorProps = { href };
 </script>
@@ -50,6 +50,9 @@ A `ctaLabel` or `cta` slot may also be provided to include an explicit button ta
 
 			{#if description}
 				<p class="truncate lines-3">{description}</p>
+			{/if}
+			{#if materialLink}
+				<p class="truncate lines-3">{materialLink}</p>
 			{/if}
 		</div>
 

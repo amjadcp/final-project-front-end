@@ -18,13 +18,14 @@ Display a collection of blog posts is a responsive grid layout.
 <div class="blog-roll" data-testid="blog-roll">
 	{#each posts as post (post.id)}
 		<ContentTile
-			ctaLabel="Read article"
-			href="/study-material/{post.slug}"
-			mediaSrc={post.image}
+			ctaLabel="Read More"
+			href="/study-material/{post.id.toString()}"
+			mediaSrc={post.material}
 			mediaAlt="no Image"
 			title={post.title}
 			date={post.published_at}
 			description={post.description}
+			materialLink={post.material_link}
 		/>
 	{:else}
 		<p>No updates found</p>

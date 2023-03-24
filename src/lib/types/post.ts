@@ -1,7 +1,6 @@
 export namespace Post {
 	export interface UpdatePost {
 		description: string;
-		excerpt: string;
 		image: string;
 		id: number;
 		published_at: string;
@@ -10,12 +9,12 @@ export namespace Post {
 	}
 	export interface StudyMaterial {
 		description: string;
-		excerpt: string;
-		image: string;
+		material: string;
 		id: number;
 		published_at: string;
 		slug: string;
 		title: string;
+		material_link: string;
 	}
 	export interface BlogPost {
 		description: string;
