@@ -31,7 +31,7 @@
 </svelte:head>
 
 <main class="blog-index-page">
-	<Section class="hero" header layout="boxed">
+	<!-- <Section class="hero" header layout="boxed">
 		<HeroBanner
 			title="Trading Strategy Blog"
 			subtitle="Read our insights into on-chain trading. We cover trading and investing in blockchains, decentralised finance (DeFi), decentralised exchanges (DEXes), automated trading strategies and web3."
@@ -40,7 +40,7 @@
 		>
 			<SocialLinks />
 		</HeroBanner>
-	</Section>
+	</Section> -->
 
 	<Section class="posts" layout="boxed" padding="md">
 		<BlogRoll {posts} />

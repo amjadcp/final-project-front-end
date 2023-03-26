@@ -29,7 +29,7 @@
 <main class="home-page">
 	<HomeHeroBanner {impressiveNumbers} />
 
-	{#if topMomentum}
+	<!-- {#if topMomentum}
 		<Section class="top-trades" layout="boxed" padding="md" title="Top trades" cols={2} gap="lg">
 			<SummaryBox title="Most profitable 24h">
 				<Button size="sm" slot="headerCta" href="/trading-view/top-list/daily-up">View all winning pairs</Button>
@@ -43,9 +43,9 @@
 				<TopTradesTable pairs={topMomentum.top_down_24h_min_liq_1m} />
 			</SummaryBox>
 		</Section>
-	{/if}
+	{/if} -->
 
-	<Section class="strategies" layout="boxed" padding="lg">
+	<!-- <Section class="strategies" layout="boxed" padding="lg">
 		<div class="inner">
 			<h2>Strategies</h2>
 			<Illustration name="bull-vs-bear" height="min(30vh, 20rem)" />
@@ -64,7 +64,7 @@
 				<Button icon="telegram" label="Follow us on Telegram" href="https://t.me/trading_protocol" target="_blank" />
 			</div>
 		</div>
-	</Section>
+	</Section> -->
 
 	{#if posts}
 		<Section title="Blog" class="blog" layout="boxed" padding="md">

@@ -33,7 +33,10 @@ Home page hero banner.
 			{#if impressiveNumbers}
 				<p class="impressive-numbers">
 			
-					In our college offers BVoc SOFTWARE DEVELOPMENT and BVoc AUTOMOBILE- AUTO ELECTRICALS & ELECTRONICS. Both programs are valuable options for students who are interested in pursuing careers in the IT industry or the automotive industry.
+					Bachelor of Vocation (B.Voc) is an Undergraduate Programme which demonstrates comprehensive skills relating to chosen B.Voc Programme and knowledge content of General Education. <br>
+					B.Voc Programmes are crafted in such a way that students acquire skills which lead students to employment in Industry. <br>
+					B.Voc Programmes identify opportunities for Industry-Institute interactions by means of internships in industries. <br>
+					B.Voc Programmes were introduced in Farook College in November 2014, offering two Vocational Programmes B.Voc Automobile – Auto Electrical & Electronics& B.Voc Software Development
 					<!----<a href="/trading-view/trading-pairs">
 						{formatAmount(impressiveNumbers.pairs)} trading pairs
 					</a>
@@ -48,10 +51,10 @@ Home page hero banner.
 				</p>
 			{/if}
 
-			<div class="buttons">
-				<Button href="/trading-view">Explore</Button>
+			<!-- <div class="buttons">
+				<Button href="https://fcdepofvocation.netlify.app/">Explore</Button>
 				<Button secondary href="https://tradingstrategy.ai/docs">Read Documentation</Button>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </header>

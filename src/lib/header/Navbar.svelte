@@ -16,10 +16,10 @@
 				<MenuItem label="Home" targetUrl="https://fcdepofvocation.netlify.app/" target="_blank"/>
 				<MenuItem label="About" targetUrl="/" active={currentPage === '/'} />
 				<!-- <MenuItem label="About" targetUrl="/about" active={currentPage === '/about'} /> -->
-				<MenuItem label="Community" targetUrl="/community" active={currentPage === '/community'} />
+				<!-- <MenuItem label="Community" targetUrl="/community" active={currentPage === '/community'} /> -->
 				<MenuItem label="Updates" targetUrl="/updates" active={currentPage === '/updates'} />
 				<MenuItem label="Study Material" targetUrl="/study-material" active={currentPage === '/study-material'} />
-				<!-- <MenuItem label="Blog" targetUrl="/blog" active={currentPage === '/blog'} /> -->
+				<MenuItem label="Blog" targetUrl="/blog" active={currentPage === '/blog'} />
 			</svelte:fragment>
 
 			<!-- <svelte:fragment slot="search">
