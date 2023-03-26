@@ -50,7 +50,7 @@
 			<h2>Strategies</h2>
 			<Illustration name="bull-vs-bear" height="min(30vh, 20rem)" />
 			<div class="coming-soon">Coming soon</div>
-			<p>Follow us to be the first to know when our automated trading strategies go live.</p>
+			<p>Follow us to be the first to know about our Departmet go live.</p>
 			<div class="ctas">
 				<div class="newsletter-cta">
 					<Button icon="newspaper" label="Subscribe to newsletter" on:click={scrollToNewsletterOptIn} />

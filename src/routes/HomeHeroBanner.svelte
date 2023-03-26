@@ -10,7 +10,7 @@ Home page hero banner.
 <script lang="ts">
 	import { goto } from '$app/navigation';
 	import { formatAmount, formatDollar } from '$lib/helpers/formatters';
-	import mbp15Image from '$lib/assets/misc/mbp-15.webp';
+	import rajagate from '$lib/assets/misc/rajagate.webp';
 	import { Button } from '$lib/components';
 
 	export let impressiveNumbers: any;
@@ -18,20 +18,23 @@ Home page hero banner.
 
 <header class="home-hero-banner" data-testid="home-hero-banner" on:dblclick={() => goto('/strategies')}>
 	<div class="inner ds-container">
-		<img class="media" src={mbp15Image} alt="Trading Data" />
+		<img class="media" src={rajagate} alt="Trading Data" />
 
 		<div class="content">
 			<h1>
 				<!-- ensure line breaks at correct place on larger screens -->
-				Next generation <br />algorithmic trading protocol <br />for decentralised markets
+				Department Of Vocational Studies
+
+                                                                                               
 			</h1>
 
 			<hr />
 
 			{#if impressiveNumbers}
 				<p class="impressive-numbers">
-					Market data and trading strategy framework for
-					<a href="/trading-view/trading-pairs">
+			
+					In our college offers BVoc SOFTWARE DEVELOPMENT and BVoc AUTOMOBILE- AUTO ELECTRICALS & ELECTRONICS. Both programs are valuable options for students who are interested in pursuing careers in the IT industry or the automotive industry.
+					<!----<a href="/trading-view/trading-pairs">
 						{formatAmount(impressiveNumbers.pairs)} trading pairs
 					</a>
 					providing
@@ -41,12 +44,12 @@ Home page hero banner.
 					across
 					<a href="/trading-view/blockchains" style:white-space="nowrap">
 						{impressiveNumbers.blockchains} blockchains
-					</a>
+					</a>-->
 				</p>
 			{/if}
 
 			<div class="buttons">
-				<Button href="/trading-view">Explore DEX Data</Button>
+				<Button href="/trading-view">Explore</Button>
 				<Button secondary href="https://tradingstrategy.ai/docs">Read Documentation</Button>
 			</div>
 		</div>
