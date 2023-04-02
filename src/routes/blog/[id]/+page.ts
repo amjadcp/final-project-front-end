@@ -1,15 +1,19 @@
 import type { PageLoad } from './$types';
 import ghostClient from '$lib/blog/client';
 import { error } from '@sveltejs/kit';
+import fetchBlog from '../fetchBlog';
 
 export const load = (async ({ params }) => {
 	try {
 		// See post data model: https://ghost.org/docs/content-api/#posts
-		return await ghostClient.posts.read({ slug: params.slug }, { formats: ['html'] });
+		return await fetchBlog(params.id)
+		// return await ghostClient.posts.read({ slug: params.slug }, { formats: ['html'] });
 	} catch (e: any) {
+		console.log(e);
+		
 		const status = e.response?.status || 500;
 		if (status === 404 || status === 422) {
-			throw error(404, `Blog post not found: ${params.slug}`);
+			throw error(404, `Blog post not found: ${params.id}`);
 		} else {
 			throw error(status, e.message);
 		}

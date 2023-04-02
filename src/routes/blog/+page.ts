@@ -1,6 +1,7 @@
 import type { PageLoad } from './$types';
-import fetchPosts from './fetchPosts';
+// import fetchPosts from './fetchPosts';
+import fetchBlogs from './fetchBlogs';
 
 export const load = (() => {
-	return fetchPosts();
+	return fetchBlogs();
 }) satisfies PageLoad;
