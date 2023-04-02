@@ -25,7 +25,7 @@
 			<img src={data.material} alt={data.feature_image_alt} />
 		</header> -->
 
-		<BlogPostContent html={data.details} />
+		<BlogPostContent pairs={data.pairs} />
 	</Section>
 
 	<!-- <Section class="newsletter" id="home-newsletter" layout="boxed" padding="md">

@@ -1,50 +1,53 @@
+<!--
+	Daily winners and losers pages
+-->
 <script lang="ts">
-	import type { PageData, PageLoad } from './$types';
-	// import fetchPosts from './fetchPosts';
+	import type { PageData } from './$types';
+	import Breadcrumbs from '$lib/breadcrumb/Breadcrumbs.svelte';
+	import { HeroBanner, Section, StudyMaterialTable } from '$lib/components';
 	import fetchMaterial from './fetchMaterial';
-	import { inview } from 'svelte-inview';
 	import Spinner from 'svelte-spinner';
-	import { StudyMaterialRoll, HeroBanner, Section } from '$lib/components';
 	import OptInBanner from '$lib/newsletter/OptInBanner.svelte';
-	// import SocialLinks from './SocialLinks.svelte';
-	import heroImage from '$lib/assets/illustrations/newspaper-1.svg?raw';
+	import { inview } from 'svelte-inview';
 
 	export let data: PageData;
 
 	let { posts, page } = data;
-	
+
 	const fetchNextPage =async()=> {
 		page.loading = true
 		try {
 			const response = await fetchMaterial(page);
 			posts = [...posts, ...response.posts];
 			page = response.page;
+			console.log(posts);
+			
 		} catch (e) {
 			page.error = e.message;
 			page.loading = false;
 		}
 	}
+    
 </script>
 
-<svelte:head>
-	<title>Study Material</title>
-	<meta name="description" content="Insights and research on DeFi and algorithmic trading." />
-</svelte:head>
+<!-- <svelte:head>
+	<title>DEX tokens with the highest daily {up ? 'profit' : 'losses'}</title>
+	<meta name="description" content="Trading pairs with most {up ? 'profit' : 'volatile losses'} for the last 24h" />
+</svelte:head> -->
 
-<main class="blog-index-page">
-	<Section class="hero" header layout="boxed">
-		<HeroBanner
-			title="Department Updates"
-			subtitle="something................"
-			image={heroImage}
-			hr={true}
-		>
-			<!-- <SocialLinks /> -->
+<!-- <Breadcrumbs labels={{ 'top-list': 'Top lists', 'daily-up': 'Daily gainers', 'daily-down': 'Daily losers' }} /> -->
+
+<main>
+	<Section header layout="boxed">
+		<HeroBanner contentFullWidth title="Study Material">
+			<!-- <svelte:fragment slot="subtitle">
+				sdsdfsdfdsposts
+			</svelte:fragment> -->
 		</HeroBanner>
 	</Section>
 
-	<Section class="posts" layout="boxed" padding="md">
-		<StudyMaterialRoll {posts} />
+	<Section layout="boxed">
+		<StudyMaterialTable pairs={posts} />
 	</Section>
 
 	<Section class="loading" layout="boxed">
@@ -66,38 +69,9 @@
 	</Section>
 </main>
 
-<style lang="postcss">
-	.blog-index-page :global {
-		& .hero {
-			& .social-links {
-				margin-top: var(--space-sm);
-
-				@media (--viewport-sm-down) {
-					margin: var(--space-md) 0;
-				}
-			}
-
-			@media (--viewport-sm-down) {
-				& .media {
-					display: none;
-				}
-			}
-		}
-
-		& .loading {
-			font: var(--f-ui-large-roman);
-
-			& .grid {
-				place-items: center;
-			}
-		}
-
-		& .svelte-spinner {
-			height: 4rem;
-			width: 4rem;
-			& circle {
-				stroke: hsla(var(--hsl-text));
-			}
-		}
+<style>
+	main {
+		display: grid;
+		gap: var(--space-xl);
 	}
 </style>

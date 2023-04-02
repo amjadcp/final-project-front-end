@@ -1,8 +1,6 @@
 <script lang="ts">
 	import TableOfContents from './TableOfContents.svelte';
 
-	export let html: string;
-
 	// Inject Table of Contents; to include TOC, add <div id="#table-of-contents"> to Ghost content
 	function injectTOC(node: HTMLElement) {
 		const target = node.querySelector('#table-of-contents');
@@ -21,13 +19,51 @@
 			wrapper.appendChild(tableEl);
 		});
 	}
+	interface MomentumPair {
+		filename: string
+	}
+
+	// Trading pairs to render in this momentum table
+	export let pairs: MomentumPair[] = [];
 </script>
 
-<div class="blog-post-content" use:injectTOC use:wrapTables>
-	{@html html}
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th class="blockchain">SlNo.</th>
+				<th class="blockchain">Material</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			{#each pairs as pair, idx}
+				<tr>
+					<td class="position">
+						#{idx + 1}
+					</td>
+					<td class="blockchain">
+						<a href={`${pair.filename}`}>
+							{pair.filename}
+						</a>
+					</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
 </div>
 
 <style lang="postcss">
+	td :global(.up-down-indicator) {
+		float: right;
+	}
+
+	/* Remove less relevant columns on mobile */
+	@media (--viewport-sm-down) {
+		:is(.exchange, .blockchain) {
+			display: none;
+		}
+	}
 	.blog-post-content :global {
 		overflow: auto;
 

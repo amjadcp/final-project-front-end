@@ -4,7 +4,7 @@
 </script>
 
 <ContentCardsTemplate pageTitle="Community" pageDescription="Blog, Discord and discussion">
-	<HeroBanner
+	<!-- <HeroBanner
 		slot="hero"
 		image={heroImage}
 		title="Community"
@@ -80,5 +80,5 @@
 				description="Subscribe to our newsletter ."
 			/>
 		</div>
-	</ContentCardsSection>
+	</ContentCardsSection> -->
 </ContentCardsTemplate>

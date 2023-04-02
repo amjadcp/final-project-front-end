@@ -19,6 +19,7 @@
 				<!-- <MenuItem label="Community" targetUrl="/community" active={currentPage === '/community'} /> -->
 				<MenuItem label="Updates" targetUrl="/updates" active={currentPage === '/updates'} />
 				<MenuItem label="Study Material" targetUrl="/study-material" active={currentPage === '/study-material'} />
+				<MenuItem label="Achievements" targetUrl="/achievements" active={currentPage === '/achievements'} />
 				<MenuItem label="Blog" targetUrl="/blog" active={currentPage === '/blog'} />
 			</svelte:fragment>
 
