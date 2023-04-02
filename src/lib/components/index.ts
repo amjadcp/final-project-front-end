@@ -39,3 +39,4 @@ export { default as TradingDataInfoRow } from './TradingDataInfoRow.svelte';
 export { default as UpDownCell } from './UpDownCell.svelte';
 export { default as UpDownIndicator } from './UpDownIndicator.svelte';
 export { default as AchievementsTable } from './AchievementsTable.svelte';
+export { default as StudyMaterialTable } from './StudyMaterialTable.svelte';

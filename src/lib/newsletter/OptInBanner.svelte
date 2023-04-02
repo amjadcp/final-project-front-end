@@ -2,7 +2,7 @@
 	import SubscribeForm from './SubscribeForm.svelte';
 </script>
 
-<div class="newsletter-opt-in-banner">
+<!-- <div class="newsletter-opt-in-banner">
 	{#if $$slots.artwork}
 		<div class="artwork">
 			<slot name="artwork" />
@@ -21,7 +21,7 @@
 		</div>
 		<SubscribeForm />
 	</div>
-</div>
+</div> -->
 
 <style lang="postcss">
 	.newsletter-opt-in-banner {

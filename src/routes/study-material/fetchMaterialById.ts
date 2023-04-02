@@ -16,11 +16,9 @@ export default async  (id: number) => {
     const storyblokApi = useStoryblokApi();
     const response = await storyblokApi.get(`cdn/stories/${id}`, { version: 'published' });
     const material  = response.data.story;
-	 
+	 console.log(material.content.material);
+     
 	return {
-        title: material.content.title,
-        material: material.content.material.filename,
-        details: renderRichText(material.content.details),
-        published_at: material.published_at
+        pairs: material.content.material
     }
 }

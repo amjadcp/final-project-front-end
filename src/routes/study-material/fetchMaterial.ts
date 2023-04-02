@@ -19,7 +19,6 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
     const material  = response.data.stories;
     
     for(let i=0; i<material.length; i++){
-        material[i].material = material[i].content.material.filename
         material[i].title = material[i].content.title
     }
 	
@@ -27,7 +26,7 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
     else page.next += 1
 
     page.loading = false
-	 
+     
 	return {
 		posts: [...material],
 		page: page
