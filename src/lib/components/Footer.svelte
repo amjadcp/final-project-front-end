@@ -6,7 +6,7 @@
 </script>
 
 <footer class:small>
-	{#if !skip}
+	<!-- {#if !skip}
 		<a href="https://github.com/tradingstrategy-ai" title="GitHub">
 			<SocialIcon name="github" />
 		</a>
@@ -38,7 +38,7 @@
 		<a href="/blog/rss.xml" rel="external" title="RSS">
 			<SocialIcon name="rss" />
 		</a>
-	{/if}
+	{/if} -->
 </footer>
 
 <style lang="postcss">

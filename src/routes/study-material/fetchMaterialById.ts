@@ -6,7 +6,7 @@ const limit = 40;
 export default async  (id: number) => {
 
     storyblokInit({
-        accessToken: 'v2rB6bKMWTeD1CaRNCodQwtt',
+        accessToken: 'russegF7t28zrFUVxG3K6wtt',
         use: [apiPlugin],
         apiOptions: {
             region: 'us'

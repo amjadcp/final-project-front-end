@@ -7,7 +7,7 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
 	if (page.next===0) return { page, posts: [] };
 
     storyblokInit({
-        accessToken: 'v2rB6bKMWTeD1CaRNCodQwtt',
+        accessToken: 'russegF7t28zrFUVxG3K6wtt',
         use: [apiPlugin],
         apiOptions: {
             region: 'us'
@@ -15,11 +15,9 @@ export default async  (page = {next:1, loading: false, error: ""}) => {
     });
 
     const storyblokApi = useStoryblokApi();
-    const response = await storyblokApi.get(`cdn/stories?filter_query[component][in]=achievements&page=1&per_page=6`, { version: 'published' });
+    const response = await storyblokApi.get(`cdn/stories?filter_query[component][in]=achievements&page=${page.next}&per_page=6`, { version: 'published' });
     const achievements  = response.data.stories;
     
-    console.log(achievements);
-
     for(let i=0; i<achievements.length; i++){
         achievements[i].file = achievements[i].content.file.filename
         achievements[i].title = achievements[i].content.title

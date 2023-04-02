@@ -7,7 +7,7 @@ export default async  (id:number) => {
 	// if (page.next===0) return { page, posts: [] };
 
     storyblokInit({
-        accessToken: 'v2rB6bKMWTeD1CaRNCodQwtt',
+        accessToken: 'russegF7t28zrFUVxG3K6wtt',
         use: [apiPlugin],
         apiOptions: {
             region: 'us'
