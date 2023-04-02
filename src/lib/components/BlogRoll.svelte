@@ -19,15 +19,15 @@ Display a collection of blog posts is a responsive grid layout.
 	{#each posts as post (post.id)}
 		<ContentTile
 			ctaLabel="Read article"
-			href="/blog/{post.slug}"
-			mediaSrc={post.feature_image}
-			mediaAlt={post.feature_image_alt}
+			href="/blog/{post.id.toString()}"
+			mediaSrc={post.image}
+			mediaAlt={"No Image"}
 			title={post.title}
 			date={post.published_at}
 			description={post.description}
 		/>
 	{:else}
-		<p>No updates found</p>
+		<p>No blogs found</p>
 	{/each}
 </div>
 

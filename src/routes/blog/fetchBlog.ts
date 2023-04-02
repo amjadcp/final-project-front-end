@@ -15,16 +15,14 @@ export default async  (id:number) => {
     });
 
     const storyblokApi = useStoryblokApi();
-    console.log(id);
     
     const response = await storyblokApi.get(`cdn/stories/${id}`, { version: 'published' });
-    const update  = response.data.story;
-	 console.log(update.content);
-     
+    const blog  = response.data.story;
+	 
 	return {
-        title: update.content.title,
-        image: update.content.image.filename,
-        details: renderRichText(update.content.details),
-        published_at: update.published_at
+        title: blog.content.title,
+        image: blog.content.image.filename,
+        details: renderRichText(blog.content.details),
+        published_at: blog.published_at
     }
 }

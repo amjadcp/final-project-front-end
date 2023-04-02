@@ -1,6 +1,7 @@
 import type { PageLoad } from './$types';
 import { backendUrl } from '$lib/config';
 import ghostClient from '$lib/blog/client';
+import fetchBlogs from './blog/fetchBlogs';
 
 // await API response and return JSON; fail gracefully if there's an error
 async function getRespJson(req: Promise<Response>) {
@@ -12,9 +13,10 @@ async function getRespJson(req: Promise<Response>) {
 }
 
 // fetch blog posts; fail gracefully if there's an error
-async function fetchBlogPosts(options = {}) {
+async function fetchBlogPosts() {
 	try {
-		return await ghostClient.posts?.browse(options);
+		const posts = await fetchBlogs()	
+		return posts.posts 
 	} catch (e) {
 		console.error('Ghost API request failed; rendering home page without blog roll');
 	}
@@ -31,6 +33,6 @@ export const load = (async ({ fetch, setHeaders }) => {
 	return {
 		topMomentum: getRespJson(fetch(`${backendUrl}/top-momentum?summary=true`)),
 		impressiveNumbers: getRespJson(fetch(`${backendUrl}/impressive-numbers`)),
-		posts: fetchBlogPosts({ limit: 4 })
+		posts: fetchBlogPosts()
 	};
 }) satisfies PageLoad;
