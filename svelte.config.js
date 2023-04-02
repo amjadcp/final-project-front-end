@@ -16,10 +16,10 @@ const config = {
 			envPrefix: 'FRONTEND_'
 		}),
 
-		alias: {
-			'design-system-fonts': 'deps/fonts',
-			'trade-executor-frontend': 'deps/trade-executor-frontend/src/lib'
-		},
+		// alias: {
+		// 	'design-system-fonts': 'deps/fonts',
+		// 	'trade-executor-frontend': 'deps/trade-executor-frontend/src/lib'
+		// },
 
 		// disable CSRF origin checking for now; see:
 		// - https://kit.svelte.dev/docs/configuration#csrf
